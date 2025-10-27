@@ -1,1 +1,23 @@
 # Sign-Language-
+▶️ How to Use
+Run:
+
+## python collect_data.py
+
+Type the letter (for example A).
+Show your hand sign in front of the webcam — keep it steady but move slightly for variety.
+Press ‘q’ to stop.
+Repeat for each letter (A, B, C, D, E).
+Now you’ll have landmark CSV files in folders like data/A/1.csv, data/B/2.csv, etc.
+
+
+## python train_model.py
+
+What happens:
+It reads all your CSV landmark files.
+Trains a neural network to recognize A–E.
+Creates and saves a file: sign_model.h5
+
+
+## python sign_recognition.py
+will recognize all the sign that are collected 
