@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 # Load dataset
 data = []
 labels = []
-signs = ['Hello', 'Good job', 'Dislike', 'Loser', 'Yeah']
+signs = ['A', 'B', 'C', 'D', 'E']
 
 for i, sign in enumerate(signs):
     folder = f'data/{sign}'
@@ -40,4 +40,5 @@ model.fit(X_train, y_train, epochs=25, validation_data=(X_test, y_test))
 
 # Save model
 model.save('sign_model.h5')
+
 print("✅ Model saved as sign_model.h5")
