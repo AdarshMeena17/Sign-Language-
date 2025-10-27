@@ -5,7 +5,7 @@ import os
 import csv
 
 # Choose sign to collect data for
-SIGN = input("Enter the sign letter (Hello / Good job / Dislike / Loser / Yeah): ").upper()
+SIGN = input("Enter the sign letter (A / B / C / D / E): ").upper()
 DATA_DIR = f'data/{SIGN}'
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -52,3 +52,4 @@ with mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7) as hands:
 cap.release()
 cv2.destroyAllWindows()
 print(f"✅ Collected {sample_count} samples for '{SIGN}'")
+
