@@ -9,7 +9,7 @@ mp_draw = mp.solutions.drawing_utils
 model = load_model('sign_model.h5')  # Your trained model file
 
 # Labels for signs
-labels = ['Hello', 'Good job ', 'Dislike', 'Loser', 'Yeah']
+labels = ['A', 'B ', 'C', 'D', 'E']
 
 # Start webcam
 cap = cv2.VideoCapture(0)
@@ -44,3 +44,4 @@ with mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7) as hands:
 
 cap.release()
 cv2.destroyAllWindows()
+
